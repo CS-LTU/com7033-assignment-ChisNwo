@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baad229f-d417-4cc7-a7fe-d4f0e4555505" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/StrokesHospitalApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQRegister.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataset.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasets.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db_creation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db_function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/load_csv_to_mongo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongo_setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_patients.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit_patient.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main_layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/patient.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/patient_information.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/register_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +38,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ChisNwo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ChisNwo/StrokeApp.git",
+    "accountId": "3a417a0b-9ae7-471a-b0d5-0bce544b9dd4"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
@@ -83,7 +71,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "database.data.extractors.current.export.id": "Tab-separated (TSV)_id",
     "database.data.extractors.current.id": "Tab-separated (TSV)_id",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/nwoko/Downloads/healthcare-dataset-stroke-data1.csv",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -240,7 +228,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732481364099</updated>
-      <workItem from="1732481365555" duration="60930000" />
+      <workItem from="1732481365555" duration="61667000" />
     </task>
     <servers />
   </component>
