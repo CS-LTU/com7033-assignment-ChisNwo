@@ -8,20 +8,19 @@ from functools import wraps
 import pandas as pd
 from db_creation import get_db_connection, get_mongodb_connection, init_databases
 
-# start databased
+# Database started
 init_databases()
 
-# connection with mongoDB
+# MongoDB connection
 mongo_db = get_mongodb_connection()
 patients = mongo_db.patients
 
-# # I need this to keep user sessions secure
+# sessions secured
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-
-# This is my security check - it makes sure nobody can register twice
-# App check both username and email
+# App checks that no one registers twice
+# App checks username and email
 def user_exists(username, email):
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -31,8 +30,7 @@ def user_exists(username, email):
     conn.close()
     return result is not None
 
-
-# This decorator is really useful as it checks if a user is logged in before displaying any pages,
+# This checks if a user is logged in before displaying other pages,
 # and redirects them to the login page if they are not logged in.
 def login_required(f):
     @wraps(f)
@@ -44,15 +42,13 @@ def login_required(f):
 
     return decorated_function
 
-
 # Routes to the home page
 @app.route('/')
 def home_page():
     return render_template('home_page.html')
 
-
-# Page where users log in
-# App check if their email exists and if their password is correct
+# This is where users log in,
+# App checks a user's email and password is correct and exists
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -71,9 +67,8 @@ def login():
         flash('Invalid email or password')
     return render_template('login.html')
 
-
-# users create new account
-# App checks if email already exists and hash their password before saving it
+# users create a new account
+# App checks email already exists and hash their password before saving
 @app.route('/register_page', methods=['GET', 'POST'])
 def register_page():
     if request.method == 'POST':
@@ -94,31 +89,22 @@ def register_page():
             conn.close()
     return render_template('register_page.html')
 
-
-# page with all patients
-# Sorted by newest
+# Page with all patients details
+# Sort by newest
 @app.route('/patients_list')
 @login_required
 def patients_list():
-    # id sorted, new added on the top list
+    # sorts ID by newest
     patient_list = list(patients.find().sort('_id', -1))
     return render_template('patient_information.html', patients=patient_list)
 
+# load patients from folder
+# Imports user dat
+# App check all the data that comes from CSV to make sure all text and numbers are values and fix or replace wrong values
 
-# load list of patients from folder
-# users can easily import their data
-#
-# App check all the data that comes from CSV:
-# Make sure all text values are correct
-# Check if numbers make sense (like age can't be 200)
-# Fix or replace any wrong values
-#
-# App also made it safe:
-# Check if file exists and isn't empty
-# Don't add the same patient twice
-# If one patient has bad data, others can still be added
-#
-# This helps keep my database clean and my risk calculations accurate
+# App checks and do not add the same patient twice
+
+# Keeps the database clean and risk calculations accurate
 def import_dataset_data():
     try:
         # path to csv file
@@ -135,7 +121,7 @@ def import_dataset_data():
             try:
                 # Check and fix all data before adding to patient_data:
 
-                # Check gender - must be "Male" or "Female"
+                # Check gender to be "Male" or "Female"
                 gender = str(row['gender']) if pd.notna(row['gender']) else "Unknown"
                 if gender not in ["Male", "Female"]:
                     gender = "Unknown"

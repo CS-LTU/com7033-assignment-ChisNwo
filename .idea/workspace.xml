@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baad229f-d417-4cc7-a7fe-d4f0e4555505" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/dataset.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +45,12 @@
     &quot;assignee&quot;: &quot;ChisNwo&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ChisNwo/StrokeApp.git&quot;,
-    &quot;accountId&quot;: &quot;3a417a0b-9ae7-471a-b0d5-0bce544b9dd4&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/CS-LTU/com7033-assignment-ChisNwo.git",
+    "accountId": "3a417a0b-9ae7-471a-b0d5-0bce544b9dd4"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -228,7 +229,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732481364099</updated>
-      <workItem from="1732481365555" duration="61972000" />
+      <workItem from="1732481365555" duration="65225000" />
     </task>
     <servers />
   </component>
