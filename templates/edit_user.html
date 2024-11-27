@@ -1,0 +1,16 @@
+<!-- This template was created to change user profile details. App displays and updates name & email of the user.-->
+{% extends "main_layout.html" %}
+{% block content %}
+<div class="edit-user-form">
+    <h2>Edit User Profile</h2>
+    <form method="POST">
+        <div class="form-group">
+            <input type="text" name="name" value="{{ user['name'] }}" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" value="{{ user['email'] }}" required>
+        </div>
+        <button type="submit" class="btn">Update User Profile</button>
+    </form>
+</div>
+{% endblock %}

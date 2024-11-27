@@ -1,0 +1,76 @@
+/* Body styling */
+*{
+    font-family: "Monotype Corsiva";
+    margin: 0;
+    padding: 0;
+    background-size: cover;  /* This ensures that the background covers the section */
+    background-attachment: fixed;
+    }
+    /*navigation bar at the top.*/
+    .nav {
+    background-color: #03074c;
+    padding: 15px;
+    text-align: center;
+    }
+    /*Opacity / transparency.*/
+    .content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #4590d8;
+    border-radius: 10px;
+    opacity: 10.8;
+    }
+    /*Every website needs good looking buttons. These match the nav bar color and get darker when you hover over them.*/
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #456789;
+    color: #080bba;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    }
+    .btn:hover {
+    background-color: #567890;
+    }
+    /*The forms need to be super clear because we're handling medical data. I made everything line up nicely and added some breathing room.*/
+    .form-group {
+    margin: 15px 0;
+    }
+    .form-input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #d81c1c;
+    border-radius: 4px;
+    }
+    .form-group input,
+    .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    }
+    /* Flexbox for centering content.*/
+    .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    }
+    /*Users need to know if something went wrong or worked ok. Red for errors, green for success.*/
+    .alert {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #F8D7DA;
+    border-radius: 5px;
+    }
+    .alert-success {
+    background-color: #D4EDDA;
+    color: #155724;
+    }
+    .alert-error {
+    background-color: #F8D7DA;
+    color: #721C24;
+    }
+

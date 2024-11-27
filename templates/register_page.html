@@ -1,0 +1,28 @@
+{% extends "main_layout.html" %}
+    {% block content %}
+    <div class="register-page">
+        <div class="register-card">
+          <h2>New User Registration</h2>
+      
+       <!-- Registration form with name, email and password fields.
+            Made all fields required to ensure we get complete user data -->
+            <form method="POST" action="{{ url_for('register_page') }}">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn">Create Account</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          {% endblock %}

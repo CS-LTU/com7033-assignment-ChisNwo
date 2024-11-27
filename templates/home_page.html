@@ -1,0 +1,56 @@
+{% extends "main_layout.html" %}
+{% block content %}
+{% if 'user_id' in session %}
+<div class="home-content">
+   <h1>Stroke Management App</h1>
+
+   <!-- Main welcome message explaining what the app does. -->
+   <h3 class="center-text">Welcome to the Stroke Management App <br><br>
+       This app is for managing and assessing stroke patients.<br>
+       It includes personal details of all stroke patients.<br>
+       The App also conveniently provides access to therapy straight from your phone or tablet.<br><br>
+      </h3>
+
+   <!-- Added medical themed image for logged-in users -->
+   <img src="https://suncoasthospice.org/wp-content/uploads/2019/04/ThinkstockPhotos-483390455.jpg" alt="Invitation" />
+</div>
+{% else %}
+<div class="home-content">
+   <!-- Simple welcome image for not logged users -->
+   <img src="https://i.pinimg.com/originals/02/d5/64/02d564524a605ddbd4017d60bcfbf126.jpg" alt="Welcome Image" />
+</div>
+{% endif %}
+
+<!-- Putting styles here -->
+<style>
+.home-content {
+   text-align: center;
+   padding: 20px;
+}
+.welcome-box, .login-box {
+   margin: 20px auto;
+   padding: 20px;
+   max-width: 400px;
+   background-color: rgba(255, 255, 255, 0.9);
+   border-radius: 10px;
+}
+.button-group {
+   margin: 20px 0;
+}
+.button-group .btn {
+   margin: 0 10px;
+}
+h1 {
+   color: #234567;
+   margin-bottom: 30px;
+}
+h3 {
+   color: #603b02;
+   font-size: 18px;
+   line-height: 1.6;
+}
+.center-text {
+   text-align: center;
+}
+</style>
+{% endblock %}
