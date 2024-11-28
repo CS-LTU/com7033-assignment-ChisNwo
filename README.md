@@ -9,19 +9,19 @@ App for the management of Stroke patient's personal information
 # •	Responsive Design: User-friendly interface accessible on multiple devices.
 # •	Data Security: Designed to ensure patient confidentiality and secure data handling.
 # Technologies Used
-•	Backend: Python (Flask)
-•	Database: SQLite for user authentication and MongoDB for patient records
-•	Frontend: HTML, CSS (with Bootstrap), Jinja2 templates
-•	Data Handling: Pandas for data import and processing
-•	Version Control: Git and GitHub
-Installations/Prerequisites
-1.	PyCharm (version 3.13)
-2.	MongoDB (local instance)
-3.	SQLite3
-4.	Git
-Steps
-1.	Clone the Repository: git clone https://github.com/ChisNwo/stroke-management-app.git
-2.	Create and Activate a Virtual Environment: python -m venv venv 
+# •	Backend: Python (Flask)
+# •	Database: SQLite for user authentication and MongoDB for patient records
+# •	Frontend: HTML, CSS (with Bootstrap), Jinja2 templates
+# •	Data Handling: Pandas for data import and processing
+# •	Version Control: Git and GitHub
+# Installations/Prerequisites
+# 1.	PyCharm (version 3.13)
+# 2.	MongoDB (local instance)
+# 3.	SQLite3
+# 4.	Git
+# Steps
+# 1.	Clone the Repository: git clone https://github.com/ChisNwo/stroke-management-app.git
+#2.	Create and Activate a Virtual Environment: python -m venv venv 
 source venv/bin/activate  # For Windows: venv\Scripts\activate
 3.	Install Dependencies: pip install -r requirements.txt
 4.	Setup Databases: Initialize the SQLite database: python db_creation.py
