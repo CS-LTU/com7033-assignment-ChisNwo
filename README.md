@@ -16,7 +16,7 @@ Technologies Used
 •	Data Handling: Pandas for data import and processing
 •	Version Control: Git and GitHub
 Installations/Prerequisites
-1.	PyCharm (version 3.8)
+1.	PyCharm (version 3.13)
 2.	MongoDB (local instance)
 3.	SQLite3
 4.	Git
