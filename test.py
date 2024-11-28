@@ -1,4 +1,4 @@
-# I use unittest to run tests and get things I need from my main a
+# I use unittest to run tests and get things I need from my app
 import unittest
 from app import app
 from app import user_exists
