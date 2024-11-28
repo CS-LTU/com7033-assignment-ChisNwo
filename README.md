@@ -1,15 +1,14 @@
 # StrokeApp
 App for the management of Stroke patient's personal information
-Stroke App
-This is a simple but comprehensive web application built to manage stroke patients' personal information, medical history, and risk assessments. The app is made/designed for healthcare professionals to help them manage stroke patients and monitor stroke risk factors.
-Features
-•	User Authentication: Secure login and registration system with hashed passwords.
-•	Patient Database: View, add, edit, and delete patient records.
-•	Stroke Risk Calculation: Automated stroke risk assessment based on health and lifestyle factors.
-•	Data Import: Bulk uploads patient data from CSV files for quick database population.
-•	Responsive Design: User-friendly interface accessible on multiple devices.
-•	Data Security: Designed to ensure patient confidentiality and secure data handling.
-Technologies Used
+# This is a simple but comprehensive web application built to manage stroke patients' personal information, medical history, and risk assessments. The app is made/designed for healthcare professionals to help them manage stroke patients and monitor stroke risk factors.
+# Features
+# •	User Authentication: Secure login and registration system with hashed passwords.
+# •	Patient Database: View, add, edit, and delete patient records.
+# •	Stroke Risk Calculation: Automated stroke risk assessment based on health and lifestyle factors.
+# •	Data Import: Bulk uploads patient data from CSV files for quick database population.
+# •	Responsive Design: User-friendly interface accessible on multiple devices.
+# •	Data Security: Designed to ensure patient confidentiality and secure data handling.
+# Technologies Used
 •	Backend: Python (Flask)
 •	Database: SQLite for user authentication and MongoDB for patient records
 •	Frontend: HTML, CSS (with Bootstrap), Jinja2 templates
