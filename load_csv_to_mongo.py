@@ -4,11 +4,10 @@ from pymongo import MongoClient
 
 from app import patients_list
 
-
 # MongoDB connection
 def connect_to_mongo():
     mongo_uri = "mongodb://localhost:27017"  # mongo uri
-    client = MongoClient(mongo_uri)
+    client = MongoClient("mongodb://localhost:27017")
     return client
 
 
@@ -46,7 +45,6 @@ def load_csv_to_mongo():
         print(e)
     except Exception as e:
         print(f"An error occurred: {e}")
-
 
 # Run the function
 if __name__ == "__main__":
