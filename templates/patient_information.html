@@ -1,34 +1,60 @@
+<!-- users can go back to the patient list page from this page.-->
 {% extends "main_layout.html" %}
 {% block content %}
-<h1>Patient List</h1>
+<center>
+<div class="patient_information">
+    <h2>Patient Details</h2>
 
-<table border="1">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Gender</th>
-            <th>Age</th>
-            <th>Hypertension</th>
-            <th>Heart Disease</th>
-            <th>Average Glucose Level</th>
-            <th>BMI</th>
-            <th>Smoking Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for patient in patients %}
-        <tr>
-            <td>{{ patient.id }}</td>
-            <td>{{ patient.gender }}</td>
-            <td>{{ patient.age }}</td>
-            <td>{{ patient.hypertension }}</td>
-            <td>{{ patient.heart_disease }}</td>
-            <td>{{ patient.avg_glucose_level }}</td>
-            <td>{{ patient.bmi }}</td>
-            <td>{{ patient.smoking_status }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+    <div class="info-card">
+        <div class="info-row">
+            <div class="info-group">
+                <label>Gender:</label> {{ patient.gender }}
+            </div>
+
+            <div class="info-group">
+                <label>Patient Age:</label> {{ patient.age }}
+            </div>
+
+            <div class="info-group">
+                <label>Hypertension:</label> {{ "Yes" if patient.hypertension == 1 else "No" }}
+            </div>
+        </div>
+
+        <div class="info-row">
+            <div class="info-group">
+                <label>Ever Married:</label> {{ patient.ever_married }}
+            </div>
+
+            <div class="info-group">
+                <label>Work Type:</label> {{ patient.work_type }}
+            </div>
+
+            <div class="info-group">
+                <label>Residence:</label> {{ patient.residence_type }}
+            </div>
+        </div>
+
+        <div class="info-row">
+            <div class="info-group">
+                <label>Glucose Level:</label> {{ patient.avg_glucose_level }}
+            </div>
+
+            <div class="info-group">
+                <label>BMI:</label> {{ patient.bmi }}
+            </div>
+
+            <div class="info-group">
+                <label>Smoking Status:</label> {{ patient.smoking_status }}
+            </div>
+            <div class="info-group">
+                <label>Heart Disease: </label> {{ "Yes" if patient.heart_disease == 1 else "No" }}
+            </div>
+        </div><br><br><br>
+
+        <div class="button-group">
+            <a href="{{ url_for('patients_list') }}" class="btn">Back to Patients List</a>
+        </div>
+    </div>
+</div></center>
 
 {% endblock %}

@@ -1,7 +1,8 @@
+<!-- This page will have same look as the rest of the application and will display a success message when patient is added -->
 {% extends "main_layout.html" %}
 {% block content %}
 <center>
-<div class="result-container">
+<div class="patient-container">
     <h2>Patient Added Successfully</h2>
     
     <div class="risk-result">
@@ -30,7 +31,7 @@
     </div><br><br><br>
 
     <div class="actions">
-        <a href="{{ url_for('patients_list') }}" class="btn">Back to Patient List</a>
+        <a href="{{ url_for('patients_list') }}" class="btn">Back to Patients list</a>
     </div>
 </div>
 </center>

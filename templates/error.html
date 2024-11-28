@@ -1,0 +1,12 @@
+{% extends "main_layout.html" %}
+{% block content %}
+ <!-- Display the error message on page. -->
+<div class="error-page">
+    <h2>{{ error }}</h2>
+<!--  message to prompt the user to retry previous action. -->
+     <p>Oops. Please try again.</p>
+  <!-- Button for user to navigate back to the home page. -->
+    <a href="/" class="btn">Return to Home Page</a>
+   
+</div>
+{% endblock %}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #EAF0F0; /* Background color */
+        }
+        .navbar {
+            background-color: #EAF0F0; /* Navbar background color */
+        }
+        .navbar .navbar-nav .nav-link, .navbar .navbar-brand {
+            color: #2983B7; /* Text color */
+            font-weight: bold; /* Bold text */
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #EAF0F0;
+            padding: 20px;
+            margin-top: 10px; /* Adjust margin to position below navbar */
+        }
+        .logo-container img {
+            max-width: 300px; /* Adjust size as needed */
+        }
+        .header {
+            font-family: 'Lexend', sans-serif;
+            font-weight: bold; /* Bold text */
+            color: #ffffff; /* White text color */
+            text-align: center;
+            margin: 30px 0;
+            line-height: 1.4; /* Adjust line height for spacing */
+        }
+        .header span {
+            display: block; /* Ensure block display */
+        }
+        .content {
+            padding-bottom: 150px; /* Add padding to the bottom */
+        }
+        .card {
+            margin: 20px auto; /* Center the card */
+            max-width: 600px; /* Adjust card width */
+        }
+        .btn-custom-danger {
+            background-color: #ff4d4d; /* Custom button color */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            font-weight: bold; /* Bold text */
+            padding: 10px 20px; /* Padding for buttons */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+        .btn-custom-danger:hover {
+            background-color: #445793; /* Slightly darker color for hover effect */
+        }
+        .btn-custom-secondary {
+            background-color: #6c757d; /* Custom secondary button color */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            font-weight: bold; /* Bold text */
+            padding: 10px 20px; /* Padding for buttons */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+        .btn-custom-secondary:hover {
+            background-color: #5a6268; /* Slightly darker color for hover effect */
+        }
+        .container {
+            max-width: 90%; /* Adjust container width */
+        }
+    </style>
+</head>
+<body>
+    {% include 'main_layout.html' %}
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/blue_and_whitelogo.png') }}" alt="Logo" class="img-fluid">
+    </div>
+    <div class="container container-content">
+        <div class="card border-danger">
+            <div class="card-header bg-danger text-white">
+                <h1 class="header">DELETE</h1>
+            </div>
+            <div class="card-body text-center">
+                <p class="lead">Are you sure you want to delete the patient with ID <strong>{{ patient_id }}</strong>?</p>
+                <form method="POST" action="/delete_patient">
+                    <input type="hidden" name="id" value="{{ patient_id }}">
+                    <button type="submit" class="btn btn-custom-danger btn-block mb-2">Yes, Delete</button>
+                </form>
+                <button onclick="location.href='/Patient List'" class="btn btn-custom-secondary btn-block">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

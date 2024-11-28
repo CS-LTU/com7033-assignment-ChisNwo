@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baad229f-d417-4cc7-a7fe-d4f0e4555505" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/add_patient.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/delete_patient.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/StrokesHospitalApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StrokesHospitalApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset_backup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_creation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load_csv_to_mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/load_csv_to_mongo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/mongo_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/add_patients.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit_patient.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_patient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main_layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient_information.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient_information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_base.db" beforeDir="false" afterPath="$PROJECT_DIR$/user_base.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +41,8 @@
         <option value="Dockerfile" />
         <option value="CSS File" />
         <option value="SQL File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -45,50 +66,52 @@
     &quot;assignee&quot;: &quot;ChisNwo&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/CS-LTU/com7033-assignment-ChisNwo.git",
-    "accountId": "3a417a0b-9ae7-471a-b0d5-0bce544b9dd4"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/CS-LTU/com7033-assignment-ChisNwo.git&quot;,
+    &quot;accountId&quot;: &quot;3a417a0b-9ae7-471a-b0d5-0bce544b9dd4&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
 }</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="2pJPmPl5zZiAkoOysGeowUSdkb9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Flask server.StrokesHospitalApp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.db_creation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.db_function.executor&quot;: &quot;Run&quot;,
-    &quot;Python.load_csv_to_mongo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mongo_setup.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Tab-separated (TSV)_id&quot;,
-    &quot;database.data.extractors.current.id&quot;: &quot;Tab-separated (TSV)_id&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nwoko/Downloads/healthcare-dataset-stroke-data1.csv&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.data.csv.formats&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Flask server.Flask (app.py).executor": "Run",
+    "Flask server.StrokesHospitalApp.executor": "Run",
+    "Python tests.Python tests in test.py.executor": "Run",
+    "Python.db_creation.executor": "Run",
+    "Python.db_function.executor": "Run",
+    "Python.load_csv_to_mongo.executor": "Run",
+    "Python.mongo_setup.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "database.data.extractors.current.id": "Comma-separated (CSV)_id",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/nwoko/PycharmProjects",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.data.csv.formats",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;tidb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "tidb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nwoko\PycharmProjects\StrokesHospitalApp\data" />
@@ -111,29 +134,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_creation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="db_function" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="StrokesHospitalApp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_function.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,6 +188,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="StrokesHospitalApp" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="StrokesHospitalApp" type="Python.FlaskServer">
       <module name="StrokesHospitalApp" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -204,12 +220,29 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="StrokesHospitalApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Python.load_csv_to_mongo" />
         <item itemvalue="Python.db_creation" />
         <item itemvalue="Python.mongo_setup" />
-        <item itemvalue="Python.db_function" />
+        <item itemvalue="Python tests.Python tests in test.py" />
       </list>
     </recent_temporary>
   </component>
@@ -229,18 +262,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732481364099</updated>
-      <workItem from="1732481365555" duration="65225000" />
+      <workItem from="1732481365555" duration="102207000" />
+      <workItem from="1732757355817" duration="2116000" />
+      <workItem from="1732790892610" duration="7415000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/StrokesHospitalApp$db_function.coverage" NAME="db_function Coverage Results" MODIFIED="1732544813314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/StrokesHospitalApp$mongo_setup.coverage" NAME="mongo_setup Coverage Results" MODIFIED="1732544826690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/StrokesHospitalApp$StrokesHospitalApp.coverage" NAME="StrokesHospitalApp Coverage Results" MODIFIED="1732713200735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/StrokesHospitalApp$load_csv_to_mongo.coverage" NAME="load_csv_to_mongo Coverage Results" MODIFIED="1732562813171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/StrokesHospitalApp$db_creation.coverage" NAME="db_creation Coverage Results" MODIFIED="1732561261799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/StrokesHospitalApp$mongo_setup.coverage" NAME="mongo_setup Coverage Results" MODIFIED="1732743280172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/StrokesHospitalApp$StrokesHospitalApp.coverage" NAME="StrokesHospitalApp Coverage Results" MODIFIED="1732821821318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/StrokesHospitalApp$.coverage" NAME=" Coverage Results" MODIFIED="1732736044991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/StrokesHospitalApp$load_csv_to_mongo.coverage" NAME="load_csv_to_mongo Coverage Results" MODIFIED="1732758959303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/StrokesHospitalApp$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1732759451284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/StrokesHospitalApp$db_creation.coverage" NAME="db_creation Coverage Results" MODIFIED="1732756892257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

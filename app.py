@@ -8,19 +8,19 @@ from functools import wraps
 import pandas as pd
 from db_creation import get_db_connection, get_mongodb_connection, init_databases
 
-# Database started
+# Database starts
 init_databases()
 
-# MongoDB connection
+# connection with mongoDB
 mongo_db = get_mongodb_connection()
-patients = mongo_db.patients
+patients = mongo_db.patients_list
 
-# sessions secured
+# # Ensures user session is secure
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-# App checks that no one registers twice
-# App checks username and email
+
+# security check ensures no one can register more than once. App to check username and email
 def user_exists(username, email):
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -30,8 +30,8 @@ def user_exists(username, email):
     conn.close()
     return result is not None
 
-# This checks if a user is logged in before displaying other pages,
-# and redirects them to the login page if they are not logged in.
+
+# Checks that user is logged in before displaying pages.
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -42,13 +42,14 @@ def login_required(f):
 
     return decorated_function
 
-# Routes to the home page
+
+# Routes to Home Page
 @app.route('/')
 def home_page():
     return render_template('home_page.html')
 
-# This is where users log in,
-# App checks a user's email and password is correct and exists
+
+# Users log in page. The App checks that their email and password is correct.
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -67,8 +68,8 @@ def login():
         flash('Invalid email or password')
     return render_template('login.html')
 
-# users create a new account
-# App checks email already exists and hash their password before saving
+
+# Create an account. Validation inplace to check that they do not exist already and hash password.
 @app.route('/register_page', methods=['GET', 'POST'])
 def register_page():
     if request.method == 'POST':
@@ -89,31 +90,27 @@ def register_page():
             conn.close()
     return render_template('register_page.html')
 
-# Page with all patients details
-# Sort by newest
+
+# List of all patients displayed
 @app.route('/patients_list')
 @login_required
 def patients_list():
-    # sorts ID by newest
+    # new patient added on the top of the list
     patient_list = list(patients.find().sort('_id', -1))
-    return render_template('patient_information.html', patients=patient_list)
+    return render_template('add_patient.html', patient=patient_list)
 
-# load patients from folder
-# Imports user dat
-# App check all the data that comes from CSV to make sure all text and numbers are values and fix or replace wrong values
 
-# App checks and do not add the same patient twice
-
-# Keeps the database clean and risk calculations accurate
-def import_dataset_data():
+# Loads patients directly from CSV file. Check all the data that comes from CSV is correct.
+# Keeps database clean and risk calculations accurate
+def import_dataset():
     try:
         # path to csv file
-        csv_path = os.path.join(os.path.dirname(__file__), 'dataset.csv')
+        csv_path = os.path.join(os.path.dirname(__file__),'dataset.csv')
 
         # read CSV
         df = pd.read_csv(csv_path)
 
-        # count added patients
+        # patients added
         added_count = 0
 
         # check each row from CSV
@@ -121,7 +118,7 @@ def import_dataset_data():
             try:
                 # Check and fix all data before adding to patient_data:
 
-                # Check gender to be "Male" or "Female"
+                # Check gender - must be "Male" or "Female"
                 gender = str(row['gender']) if pd.notna(row['gender']) else "Unknown"
                 if gender not in ["Male", "Female"]:
                     gender = "Unknown"
@@ -147,11 +144,11 @@ def import_dataset_data():
                     work_type = "Unknown"
 
                 # Check residence type
-                residence_type = str(row['Residence_type']) if pd.notna(row['Residence_type']) else "Unknown"
-                if residence_type not in ["Urban", "Rural"]:
-                    residence_type = "Unknown"
+                Residence_type = str(row['Residence_type']) if pd.notna(row['Residence_type']) else "Unknown"
+                if Residence_type not in ["Urban", "Rural"]:
+                    Residence_type = "Unknown"
 
-                # Check glucose - must be realistic medical value
+                # Check glucose
                 glucose = float(row['avg_glucose_level']) if pd.notna(row['avg_glucose_level']) else 0.0
                 if glucose < 0 or glucose > 500:  # normal values are between 0 and 500
                     glucose = 0.0
@@ -173,7 +170,7 @@ def import_dataset_data():
                     'hypertension': hypertension,
                     'ever_married': ever_married,
                     'work_type': work_type,
-                    'residence_type': residence_type,
+                    'Residence_type': Residence_type,
                     'avg_glucose_level': glucose,
                     'bmi': bmi,
                     'smoking_status': smoking
@@ -192,7 +189,7 @@ def import_dataset_data():
 
                 patient_data['stroke_risk'] = min(risk_factors, 1.0)
 
-                # Check if patient already exists
+                # Check if patient exists
                 existing_patient = patients.find_one({
                     'gender': patient_data['gender'],
                     'age': patient_data['age'],
@@ -200,7 +197,7 @@ def import_dataset_data():
                     'avg_glucose_level': patient_data['avg_glucose_level']
                 })
 
-                # Add new patients only
+                # Add new patients
                 if not existing_patient:
                     patients.insert_one(patient_data)
                     added_count += 1
@@ -219,25 +216,22 @@ def import_dataset_data():
         return False, f"Error data: {str(e)}"
 
 
-# This is the button that uses my import function. If something goes wrong, app show an error message
+# import function used
 @app.route('/import_dataset', methods=['GET'])
 @login_required
 def import_dataset_route():
-    success, message = import_dataset_data()
+    success, message = import_dataset()
     if success:
         flash(message)
     else:
         flash(message, 'error')
-    return redirect(url_for('patients_list'))
+    return redirect(url_for('patient_list'))
 
 
-# # This is where app add new patients and check their stroke risk
-# I got these risk values from the American Stroke Association and CDC resources:
-# High blood pressure adds 0.3 to risk
-# Being over 60 adds 0.3
-# High glucose adds 0.2
-# Smoking adds 0.2
-# The most someone can get is 1.0 (100% risk)
+# Add new patients via App and calculate the risk values from the American Stroke Association and CDC resources:
+# High blood pressure adds 0.3 to risk, Being over 60 adds 0.3
+# High glucose adds 0.2, Smoking adds 0.2
+# The Highest a patient can get is 1.0 (100% risk)
 
 @app.route('/add_patients', methods=['GET', 'POST'])
 @login_required
@@ -247,9 +241,10 @@ def add_patients_route():
             'gender': request.form['gender'],
             'age': float(request.form['age']),
             'hypertension': int(request.form['hypertension']),
+            'heart_disease': int(request.form['heart_disease']),  # dodane
             'ever_married': request.form['ever_married'],
             'work_type': request.form['work_type'],
-            'residence_type': request.form['residence_type'],
+            'Residence_type': request.form['Residence_type'],
             'avg_glucose_level': float(request.form['avg_glucose_level']),
             'bmi': float(request.form['bmi']),
             'smoking_status': request.form['smoking_status']
@@ -267,7 +262,7 @@ def add_patients_route():
         stroke_risk = float(min(risk_factors, 1.0))
         patient_data['stroke_risk'] = stroke_risk
 
-        patients.insert_one(patient_data)
+        patients_list.insert_one(patient_data)
 
         flash('Patient added successfully!')
         return render_template('patient.html',
@@ -280,19 +275,19 @@ def add_patients_route():
     return redirect(url_for('patients_list'))
 
 
-# When someone clicks on a patient info button, this shows all their details
+# Click on a patient info and it shows their details
 
 @app.route('/patient_information/<string:patient_id>')
 @login_required
 def patient_information(patient_id):
-    patient = patients.find_one({'_id': ObjectId(patient_id)})
+    patient = patients_list.find_one({'_id': ObjectId(patient_id)})
     if patient:
-        return render_template('patient_information.html', patient=patient)
+        return render_template('patient_information.html', patients=patients_list)
     flash('Patient not found!')
     return redirect(url_for('patients_list'))
 
 
-# This is how users log out. I use session.clear() to remove all their data
+# user log out.
 @app.route('/logout')
 def logout():
     session.clear()
@@ -303,7 +298,7 @@ def logout():
 @app.route('/edit_patient/<string:patient_id>', methods=['GET', 'POST'])
 @login_required
 def edit_patient(patient_id):
-    patient = patients.find_one({'_id': ObjectId(patient_id)})
+    patient = patients_list.find_one({'_id': ObjectId(patient_id)})
     if not patient:
         flash('Patient not found!')
         return redirect(url_for('patients_list'))
@@ -317,7 +312,7 @@ def edit_patient(patient_id):
                 'hypertension': int(request.form['hypertension']),
                 'ever_married': request.form['ever_married'],
                 'work_type': request.form['work_type'],
-                'residence_type': request.form['residence_type'],
+                'Residence_type': request.form['Residence_type'],
                 'avg_glucose_level': float(request.form['avg_glucose_level']),
                 'bmi': float(request.form['bmi']),
                 'smoking_status': request.form['smoking_status']
@@ -336,8 +331,8 @@ def edit_patient(patient_id):
 
             updated_data['stroke_risk'] = min(risk_factors, 1.0)
 
-            # Update Patient infi in database
-            result = patients.update_one(
+            # Update Patient info in database
+            result = patients_list.update_one(
                 {'_id': ObjectId(patient_id)},
                 {'$set': updated_data}
             )
@@ -354,13 +349,13 @@ def edit_patient(patient_id):
         except Exception as e:
             flash(f'Error updating patient: {str(e)}')
 
-    return render_template('edit_patient.html', patient=patient)
+    return render_template('edit_patient.html', patients=patients_list)
 
 
 @app.route('/delete_patient/<string:patient_id>')
 @login_required
 def delete_patient(patient_id):
-    patients.delete_one({'_id': ObjectId(patient_id)})
+    patients_list.delete_one({'_id': ObjectId(patient_id)})
     flash('Patient deleted successfully!')
     return redirect(url_for('patients_list'))
 
@@ -395,6 +390,6 @@ def delete_user():
     return redirect(url_for('home_page'))
 
 
-# This runs my app; (debug=True) - shows me errors when something goes wrong
+# Runs app; (debug=True) - shows errors when something is not right.
 if __name__ == '__main__':
     app.run(debug=True)

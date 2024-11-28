@@ -3,8 +3,9 @@ from pymongo import MongoClient
 def connect_to_mongo():
     try:
         # MongoDB connection string
-        mongo_uri = "mongodb://localhost:27017"  # Update for MongoDB Atlas if needed
-        client = MongoClient(mongo_uri)
+        mongo_uri = "mongodb://localhost:27017/"
+        client = MongoClient("mongodb://localhost:27017/")
+        db = client['patients_list']
 
         # Test connection
         print("MongoDB connection successful!")

@@ -1,5 +1,15 @@
 /* Body styling */
 *{
+    /* Add this to your main.css file */
+.banner-container {
+    text-align: center; /* Center the banner horizontally */
+    margin-top: 10px;   /* Add some space from the top */
+}
+
+.banner {
+    width: 100px; /* Reduce the width */
+    height: auto; /* Maintains aspect ratio */
+}
     font-family: "Monotype Corsiva";
     margin: 0;
     padding: 0;
@@ -9,32 +19,32 @@
     /*navigation bar at the top.*/
     .nav {
     background-color: #03074c;
-    padding: 15px;
-    text-align: center;
+    padding: 20px;
+    text-align: right;
     }
     /*Opacity / transparency.*/
     .content {
     margin: 20px;
     padding: 20px;
-    background-color: #4590d8;
-    border-radius: 10px;
+    background-color: #05a8dc;
+    border-radius: 5px;
     opacity: 10.8;
     }
-    /*Every website needs good looking buttons. These match the nav bar color and get darker when you hover over them.*/
+    /* get darker when you hover over them.*/
     .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #456789;
-    color: #080bba;
+    padding: 15px 20px;
+    background-color: #734707;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration-line: underline;
     }
     .btn:hover {
-    background-color: #567890;
+    background-color: #2f0554;
     }
-    /*The forms need to be super clear because we're handling medical data. I made everything line up nicely and added some breathing room.*/
+    /*Form is clear.*/
     .form-group {
     margin: 15px 0;
     }
@@ -47,8 +57,8 @@
     .form-group input,
     .form-group select {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #DDDDDD;
+    padding: 5px;
+    border: 2px solid #03074c;
     border-radius: 4px;
     background-color: #FFFFFF;
     }
@@ -62,7 +72,7 @@
     .alert {
     padding: 10px;
     margin: 10px 0;
-    background-color: #F8D7DA;
+    background-color: #9ac0c3;
     border-radius: 5px;
     }
     .alert-success {

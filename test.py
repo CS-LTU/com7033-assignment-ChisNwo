@@ -13,40 +13,38 @@ class StrokesHospitalApp(unittest.TestCase):
         self.email = "chis@gmail.com"
 
         # If home page opens
-
     def test_home_page(self):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
+        self.assertIn(b"Home Page", response.data)
 
         # If login page opens
-
     def test_login(self):
         response = self.app.get('/login')
         self.assertEqual(response.status_code, 200)
+        self.assertIn(b"Login", response.data)
 
         # If register page opens
-
     def test_register_page(self):
         response = self.app.get('/register_page')
         self.assertEqual(response.status_code, 200)
+        self.assertIn(b"Register", response.data)
 
         # If app blocks access to patient list when not logged in
 
     def test_patient_list_redirect_when_not_logged_in(self):
-        response = self.app.get('/patients_list')
-        self.assertEqual(response.status_code, 302)
+        response = self.app.get("/patient-list", follow_redirects=False)
+        self.assertEqual(response.status_code, 302)  # HTTP 302 Found (redirect)
+        self.assertIn(b"/login", response.headers["Location"])  # Redirect URL
 
         # If app can find existing users in database
 
     def test_registration(self):
         response = self.app.get('/register_page')
         self.assertEqual(response.status_code, 200)
+        self.assertIn(b"Register", response.data)
 
         # If login endpoint responds correctly
-
-    def test_login(self):
-        response = self.app.get('/login')
-        self.assertEqual(response.status_code, 200)
 
         # Tests if user registration works
 

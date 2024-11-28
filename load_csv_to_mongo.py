@@ -13,7 +13,7 @@ def connect_to_mongo():
 
 
 # Insert CSV data into MongoDB
-def load_csv_to_mongo(stroke_management=None):
+def load_csv_to_mongo():
     try:
         # Path to CSV
         csv_path = os.path.join(os.path.dirname(__file__), 'dataset.csv')

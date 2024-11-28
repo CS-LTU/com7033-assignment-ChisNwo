@@ -11,7 +11,7 @@ def setup_sqlite():
     conn = sqlite3.connect('user_base.db')
     cursor = conn.cursor()
 
-    # Create users table with all needed fields
+    # Create users table with fields
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -27,16 +27,16 @@ def setup_sqlite():
 
 
 def setup_mongodb():
-    # Set up MongoDB for patient medical data
+    # Set up MongoDB for patient medical information
     client = MongoClient('mongodb://localhost:27017/')
     db = client['stroke_management']
 
-    # Create collection only if it doesn't exist
-    if 'patients' not in db.list_collection_names():
+    # Create collection if it doesn't exist
+    if 'patients_list' not in db.list_collection_names():
         db.create_collection('patients_list')
 
     # Create or get the patients collection
-    if 'patients' not in db.list_collection_names():
+    if 'patients-list' not in db.list_collection_names():
         db.create_collection('patients_list')
 
     # Set rules for patient data
@@ -115,7 +115,7 @@ def init_databases():
         raise e  # Re-raise the error so the app knows something went wrong
 
 
-# Database connection functions
+# Database connection
 
 def get_db_connection():
     # Connect to SQLite - used for user accounts
@@ -130,7 +130,19 @@ def get_mongodb_connection():
     db = client['stroke_management']
     return db
 
+from pymongo import MongoClient
 
-# Only run database setup if this file is run directly
+def setup_mongodb():
+    client = MongoClient('mongodb://localhost:27017/')  # connection string
+    db = client['Stroke_management']  #database name
+
+    if 'patients_list' in db.list_collection_names():
+        db['patients_list'].drop()
+        print("collection 'patients_list' dropped.")
+
+        db.create_collection('patients_list')
+        print("Collection 'patients_list' created successfully.")
+
+# Only run database setup if this file is ran directly
 if __name__ == "__main__":
     init_databases()
