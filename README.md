@@ -1,5 +1,6 @@
+
 # StrokeApp
-<<<<<<< HEAD
+
 This is a simple but comprehensive web application built to manage stroke patients' personal information, medical history, and risk assessments.
 The app is made/designed for healthcare professionals to help them manage stroke patients and monitor stroke risk factors.
 
