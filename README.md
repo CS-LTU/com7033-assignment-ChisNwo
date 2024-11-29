@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 This is a simple but comprehensive web application built to manage stroke patients' personal information, medical history, and risk assessments.
 The app is made/designed for healthcare professionals to help them manage stroke patients and monitor stroke risk factors.
+
 # Features
 * User Authentication: Secure login and registration system with hashed passwords.
 * Patient Database: View, add, edit, and delete patient records.
@@ -15,7 +16,8 @@ The app is made/designed for healthcare professionals to help them manage stroke
 2. MongoDB
 3. SQLite3
 4. Git
-=======
+
+
 # Steps
 1. Clone the repository: git clone http://github.com/ChisNwo/stroke_management-app.git
 2. Create and activate a Virtual Environment: python -m venu venu soource venu/bin/activate
@@ -24,6 +26,7 @@ The app is made/designed for healthcare professionals to help them manage stroke
      Configure MongoDB connection settings in mongo_setup.py
 5. Run the application': flask run
 6. Access the App: Open your browser and go to http://127.0.0.1:5000.
+
 
 # Application
 > project_root/
