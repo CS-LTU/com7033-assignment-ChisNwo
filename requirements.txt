@@ -1,0 +1,14 @@
+Flask
+Flask-Bcrypt
+Flask-Login
+pymongo
+SQlite
+pandas
+Werkzeug
+Pycharm
+Bcrypt
+Mongodb
+SQLAlchemy
+Jinja2
+Flask-SQLAlchemy
+Alambic
